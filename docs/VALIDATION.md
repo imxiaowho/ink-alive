@@ -1,4 +1,16 @@
-# InkAlive v1.0.0 validation
+# InkAlive v1.1.0 validation
+
+## Native PNG addition
+
+The native mode was exercised on a newly generated, locally retained 1920-by-1080 Panna corridor portrait: five actual head drawings, ten timed states, fifty samples, 2000 ms. Original actor pixels were retained at 1:1; generated scene extensions and pose cells were downsampled rather than enlarged. Independent RGB source keys, static pixels and timestamps remain exact in native PNG output. GIF checks compare palette-quantized source keys, not original RGB colors.
+
+The actual GIF fully decoded with a shared palette, opaque full frames and retain-frame disposal. All fifty decoded states and original-pixel eye/mouth/neck/wrap samples were inspected. Actual GIF browser playback was observed in sequential UI captures; an original-PNG-derived video was also observed at rate 1 across a loop wrap. These are sampled playback observations, not a continuous human-viewing claim. The silent shot has no listening review. Mechanical passes did not establish visual quality: malformed-eye and doubled-brow trials were rejected before the selected version.
+
+The new native prepare-review, record-review and finalize commands completed on the selected artifact, binding all native PNG masters and inspection evidence to the review manifest. Selection records agent review, not new user acceptance. The render reports the development version 1.1.0-preview; released processing logic is unchanged apart from its version constant. Native detail review is an additional explicit check, not an automatic detector.
+
+Only this fixed-camera head action is established. Native 4K, moving bodies/cameras, walking/hand-heavy actions, resource capacity beyond this pilot and cross-platform installations are unverified. GIF reduces color and may be large. Full-frame PNG decoding and some arrays still consume additional memory beyond the declared moving-crop buffer. No new test suite is claimed. HD pilot art/private continuity are excluded from the portable public package; the historical complete small example remains available below.
+
+## Historical v1.0.0 reference validation
 
 ## Reproducible reference
 

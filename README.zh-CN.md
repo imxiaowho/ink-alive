@@ -53,6 +53,23 @@ python skills/ink-alive/scripts/gif_tool.py inspect output/panna-v1/preview.gif 
 
 新任务从 `init` 开始，提供实际原画和参数。工具命令为 `init`、`render`、`inspect`、`record-review`、`finalize`；完整用法见 [参数与命令说明](skills/ink-alive/references/recipe.md)。
 
+## v1.1.0：独立 PNG 与高清流程
+
+新增 `png_motion.py`：读取按顺序排列的不透明全彩 PNG 关键帧，检查声明的画布像素预算及运动区域之外的固定画面，保留原色 PNG 母版，再单独导出 256 色 GIF。仅运动裁切区域进入补帧，并声明该缓冲区的内存预算；实际原画细节仍需查看，文件尺寸不能证明图片没有预先放大。
+
+本地已完成一个带固定校园走廊背景的 1920 × 1080 潘娜试样，实际走过渲染、解码／原色帧检查、六项视觉审查、正常速度播放采样及绑定母版清单的选定导出。它使用五个实际绘制姿态、十个计时状态，在两秒内输出五十幅图像。旧参考与原处理脚本保持不变。新高清试样原画未加入本公开技能包，也未宣称已获用户认可。
+
+使用自己的高清原画及当前镜头坐标，详见 [独立 PNG 制作与审计](skills/ink-alive/references/native-png.md)：
+
+```sh
+python skills/ink-alive/scripts/png_motion.py render /absolute/project.json --out /absolute/render-v1
+python skills/ink-alive/scripts/png_motion.py prepare-review /absolute/render-v1
+python skills/ink-alive/scripts/png_motion.py record-review /absolute/render-v1 --record /absolute/review.json
+python skills/ink-alive/scripts/png_motion.py finalize /absolute/render-v1 --out /absolute/selected-v1
+```
+
+睁眼等遮挡变化先补绘真实阶段；可选的面部区域保护需要人工检查坐标，不会自动识别人脸。大动作、运动身体／机位、原生 4K 和跨平台容量尚未验证。高清 GIF 体积可能很大且有减色，剪辑使用全彩 PNG 母版，轻量观看可另出明确标注的视频。
+
 ## 范围和验证
 
 已完成这条胸像抬眼／轻点头参考的完整复现，见 [验证记录与限制](docs/VALIDATION.md)。新角色、新角度要重新检查素材、蒙版与坐标；大动作和严重遮挡需补画或拆镜头。细线形变、插帧软化仍需看实际画面。

@@ -53,6 +53,23 @@ The render includes PNG keys, the final `preview.gif`, a comparison HTML page, d
 
 For new work, start with `init`, then supply your own inspected art and recipe. The available commands are `init`, `render`, `inspect`, `record-review` and `finalize`; see [CLI and recipe documentation](skills/ink-alive/references/recipe.md).
 
+## Native PNG and HD workflow in v1.1.0
+
+The new `png_motion.py` mode reads ordered opaque RGB PNG keys, checks a declared minimum canvas size and fixed pixels outside the moving region, and retains original-color PNG masters separately from the 256-color GIF. Only the moving crop enters flow; its frame-buffer budget is explicit. Actual source dimensions and provenance still need inspection: a larger header does not prove native subject detail.
+
+A local 1920 × 1080 fixed-corridor Panna pilot exercised rendering, decoded/native checks, six visual-review categories, sampled normal-speed GIF/video playback and manifest-bound selection. It used five actual drawings, ten timed states and fifty output samples over two seconds. The original small reference and legacy processing scripts are unchanged. New HD pilot artwork is not part of this public skill package and has not been claimed user-approved.
+
+Use your own inspected full-resolution keys and shot-specific coordinates; see [native PNG preparation and audit](skills/ink-alive/references/native-png.md):
+
+```sh
+python skills/ink-alive/scripts/png_motion.py render /absolute/project.json --out /absolute/render-v1
+python skills/ink-alive/scripts/png_motion.py prepare-review /absolute/render-v1
+python skills/ink-alive/scripts/png_motion.py record-review /absolute/render-v1 --record /absolute/review.json
+python skills/ink-alive/scripts/png_motion.py finalize /absolute/render-v1 --out /absolute/selected-v1
+```
+
+Add real drawn eyelid phases for newly revealed eyes. Optional inspected face patches avoid split-brow artifacts; they are not automatic face detection. Large actions, moving bodies/cameras, native 4K and cross-platform capacity remain unverified. Full-frame HD GIFs can be large and lose colors; use native PNGs for film editing and a separately labeled video for compact viewing.
+
 ## Scope and verification
 
 The accepted chest-up gaze/nod was reproduced end-to-end; see [validation and limits](docs/VALIDATION.md). New characters and views need their own art, masks and coordinates. Large movements or heavy occlusion may require new drawn keys or smaller shots. Fine interpolation and line variation require actual visual judgment.

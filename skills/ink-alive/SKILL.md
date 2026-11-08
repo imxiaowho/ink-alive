@@ -19,6 +19,8 @@ Start with one short GIF. Record intended entry/action/exit, camera, identity, m
 
 ## Local tool
 
+For independent native PNG keys, fixed-background HD shots or a declared per-frame pixel budget, read [native PNG production](references/native-png.md) and use `scripts/png_motion.py`. Preserve original-color PNG masters separately from the palette-reduced GIF; inspect returned source dimensions, generated seams and eye occlusion. A larger canvas alone does not establish native subject detail. The native path has its own prepare-review/record-review/finalize commands and an additional native-detail audit.
+
 Use `python scripts/gif_tool.py --help`. See [recipe/CLI reference](references/recipe.md) for configurable inputs, coordinates and review records. Dependencies are listed in `requirements.txt`; use an existing environment when available.
 
 Create a project with `init`, generate its art, inspect source grid/alpha and configure `project.json`. Source sheet extraction and ordinary encoding are defaults. Enable fixed-background repair, idle-torso/head stabilization or dense expression in-betweens only when justified by the actual shot.
@@ -42,4 +44,4 @@ View `preview.gif`, actual decoded review sheets and the approved reference at n
 
 The helper always leaves visual/playback review pending. Fill a SHA-bound review record only after actual inspection. Use `record-review`, then `finalize` when required visual checks and observed playback or explicit exact-artifact user acceptance exist. These are agent verification steps, not a request for repeated user permission. If a needed view is unavailable, deliver an honestly labeled preview with the exact limitation; do not invent a passed review.
 
-Show the selected GIF inline with a usable file link, a concise change/limit note and the project/check record. Keep rejected experiments apart. Update the current project's continuity files as required there. Do not publish, upload or extend to a film/batch from this skill invocation alone.
+Show the selected GIF inline with a usable file link, a concise change/limit note and the project/check record. For a large HD GIF, a compact full-color video preview may accompany the native GIF and PNG sources; label its format and any scaling. Keep rejected experiments apart. Update the current project's continuity files as required there. Do not publish, upload or extend to a film/batch from this skill invocation alone.
