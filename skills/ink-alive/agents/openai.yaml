@@ -1,0 +1,4 @@
+interface:
+  display_name: "InkAlive · 妙笔生动"
+  short_description: "按已确认样片标准制作和修复角色 GIF，检查稳定性、表情动作及循环衔接"
+  default_prompt: "使用 $ink-alive，按已确认的潘娜参考效果制作这张角色 GIF。"

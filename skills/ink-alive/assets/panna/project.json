@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "id": "panna-approved-full-pipeline",
+  "loop": true,
+  "source": {
+    "kind": "sheet",
+    "path": "source-sheet.png",
+    "grid": [
+      6,
+      4
+    ],
+    "edge_trim": 2,
+    "durations_ms": [
+      120,
+      80,
+      80,
+      80,
+      80,
+      80,
+      80,
+      80,
+      80,
+      80,
+      80,
+      80,
+      80,
+      80,
+      80,
+      80,
+      80,
+      80,
+      80,
+      80,
+      80,
+      80,
+      80,
+      120
+    ]
+  },
+  "background": {
+    "mode": "fixed",
+    "matte": "foreground-alpha.png",
+    "target_rgb": [
+      250,
+      239,
+      221
+    ],
+    "alpha_clip": [
+      100,
+      200
+    ],
+    "ink_support": {
+      "red_range": [
+        235,
+        245
+      ],
+      "radius": 4
+    }
+  },
+  "stabilize": {
+    "enabled": true,
+    "torso_idle": true,
+    "head_matte": "head-alpha.png",
+    "coordinate_size": [
+      252,
+      252
+    ],
+    "master": 0,
+    "head_clip_y": 211,
+    "ink_max_y": 190,
+    "torso_transition_y": [
+      185,
+      200
+    ],
+    "protected_ellipses": [
+      [
+        139,
+        106,
+        57,
+        27
+      ],
+      [
+        154,
+        147,
+        26,
+        13
+      ]
+    ],
+    "hair_region": {
+      "upper_y": 82,
+      "left_x": 85,
+      "right_x": 190,
+      "lower_y": 185
+    },
+    "reference_strength": 0.7,
+    "head_alpha_clip": [
+      100,
+      200
+    ],
+    "head_ink_support": {
+      "red_range": [
+        235,
+        245
+      ],
+      "radius": 4
+    }
+  },
+  "interpolate": {
+    "enabled": true,
+    "step_ms": 40,
+    "eyes": [
+      {
+        "ellipse": [
+          113,
+          110,
+          25,
+          14
+        ],
+        "white_box": [
+          91,
+          96,
+          138,
+          126
+        ],
+        "feather_px": 1.2
+      },
+      {
+        "ellipse": [
+          171,
+          102,
+          23,
+          14
+        ],
+        "white_box": [
+          150,
+          87,
+          193,
+          118
+        ],
+        "feather_px": 1.2
+      }
+    ]
+  }
+}

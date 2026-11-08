@@ -1,0 +1,21 @@
+{
+  "art_tool": "built-in imagegen",
+  "sequence": "source-sheet.png",
+  "identity_master": "identity-reference.png",
+  "matte_sources": {
+    "foreground-alpha.png": "Alpha channel from original background extraction; generated RGB discarded.",
+    "head-alpha.png": "Alpha channel from original head/neck extraction; generated RGB discarded."
+  },
+  "prompts": [
+    "prompts/01-sequence.prompt.txt",
+    "prompts/02-background-extraction.prompt.txt",
+    "prompts/03-head-layer-extraction.prompt.txt"
+  ],
+  "note": "Original example assets for the bundled Panna recipe; included with the project owner's explicit request to publish InkAlive on 2026-11-08. No third-party model or executable is bundled.",
+  "sha256": {
+    "source-sheet.png": "69cdfd7aefbf786b3a5a0ec8e79b542d34a9a213161ab4034723007064220e9e",
+    "identity-reference.png": "a25b5fdb1318e245b3ac00dff7ece071ae755c3c4ab87319c0d3d71a010881a8",
+    "foreground-alpha.png": "09d6a4721e10deaebb44eab5d3ec1cd8cbcaff1c49d9dd6521f1bc1ec2e8b27c",
+    "head-alpha.png": "6ef95eb3468097850e05ab910d47bb5643a8beac126293653d5c18329b45bb1e"
+  }
+}

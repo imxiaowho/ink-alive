@@ -1,0 +1,16 @@
+{
+  "approved_on": "2026-11-08",
+  "timezone": "Asia/Shanghai",
+  "artifact": "panna-approved.gif",
+  "artifact_sha256": "3db81ef6b0d3113056e418f218857c2bbde6a2b7d12e4984c707fc5b5eca4312",
+  "scope": "Approved reference effect for future single-shot comic GIF quality, not automatic acceptance/publication of future outputs.",
+  "frames": 50,
+  "drawn_source_keys": 24,
+  "inferred_intermediates": 26,
+  "duration_ms": 2000,
+  "dimensions": [
+    252,
+    252
+  ],
+  "approval_summary": "The project owner accepted this exact Panna gaze/nod GIF as the final reference effect on 2026-11-08. This historical acceptance does not approve new outputs."
+}
